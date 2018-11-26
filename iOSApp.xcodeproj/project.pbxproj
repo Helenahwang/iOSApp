@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		251EBBCD21AB9ABF0048CB93 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBCC21AB9ABF0048CB93 /* MovieVO.swift */; };
 		251EBBCF21ABA6840048CB93 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBCE21ABA6840048CB93 /* MovieCell.swift */; };
+		251EBBD121ABDA720048CB93 /* UML.pptx in Resources */ = {isa = PBXBuildFile; fileRef = 251EBBD021ABDA720048CB93 /* UML.pptx */; };
 		259640F221AB861500A47DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259640F121AB861500A47DBE /* AppDelegate.swift */; };
 		259640F421AB861500A47DBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259640F321AB861500A47DBE /* ViewController.swift */; };
 		259640F721AB861500A47DBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259640F521AB861500A47DBE /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		251EBBCC21AB9ABF0048CB93 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 		251EBBCE21ABA6840048CB93 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		251EBBD021ABDA720048CB93 /* UML.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = UML.pptx; sourceTree = "<group>"; };
 		259640EE21AB861500A47DBE /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259640F121AB861500A47DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259640F321AB861500A47DBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		259640F021AB861500A47DBE /* iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				251EBBD021ABDA720048CB93 /* UML.pptx */,
 				259640F121AB861500A47DBE /* AppDelegate.swift */,
 				259640F321AB861500A47DBE /* ViewController.swift */,
 				259640F521AB861500A47DBE /* Main.storyboard */,
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251EBBD121ABDA720048CB93 /* UML.pptx in Resources */,
 				259640FF21AB861600A47DBE /* LaunchScreen.storyboard in Resources */,
 				259640FC21AB861600A47DBE /* Assets.xcassets in Resources */,
 				259640F721AB861500A47DBE /* Main.storyboard in Resources */,
