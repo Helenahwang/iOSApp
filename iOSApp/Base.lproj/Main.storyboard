@@ -33,14 +33,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="S6N-WY-bjz"/>
                     <connections>
-                        <segue destination="2cM-gM-BSp" kind="show" id="90Q-Gq-pSc"/>
+                        <segue destination="xwx-Yw-Cam" kind="show" id="90Q-Gq-pSc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876" y="56"/>
+            <point key="canvasLocation" x="-548" y="27"/>
         </scene>
-        <!--Movie List Controller-->
+        <!--영화정보-->
         <scene sceneID="LqI-WC-gJk">
             <objects>
                 <tableViewController storyboardIdentifier="MovieListController" id="2cM-gM-BSp" customClass="MovieListController" customModule="iOSApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,10 +96,105 @@
                             <outlet property="delegate" destination="2cM-gM-BSp" id="DAq-iQ-97w"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="영화정보" id="ixy-94-mUS"/>
+                    <connections>
+                        <segue destination="I3z-xi-b1q" kind="show" id="E4Z-53-A32"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ad2-tJ-SsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="-244.22788605697153"/>
+            <point key="canvasLocation" x="2256.8000000000002" y="-243.32833583208398"/>
+        </scene>
+        <!--영화관목록-->
+        <scene sceneID="gtY-Jm-SoD">
+            <objects>
+                <tableViewController storyboardIdentifier="TheaterListController" id="D1r-Q6-kVj" customClass="TheaterListController" customModule="iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gdI-E3-sxA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TheaterCell" rowHeight="80" id="932-8c-UIJ" customClass="TheaterCell" customModule="iOSApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="932-8c-UIJ" id="YnZ-We-V4t">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="극장명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp6-de-5vs">
+                                            <rect key="frame" x="29" y="11" width="127" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="연락처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-Q8-loT">
+                                            <rect key="frame" x="171" y="11" width="127" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN1-q3-74a">
+                                            <rect key="frame" x="29" y="40" width="269" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblAddr" destination="mN1-q3-74a" id="1Fg-wD-2eW"/>
+                                    <outlet property="lblName" destination="Rp6-de-5vs" id="pb8-5i-fAl"/>
+                                    <outlet property="lblPhone" destination="SMn-Q8-loT" id="nUj-3c-PCM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="D1r-Q6-kVj" id="BQE-Py-Vs6"/>
+                            <outlet property="delegate" destination="D1r-Q6-kVj" id="r0a-Rj-6xL"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="영화관목록" id="iov-rt-Dgh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2X-hq-WUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2220" y="510.49475262368821"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xdN-Kk-IeV">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="I3z-xi-b1q" customClass="DetailViewController" customModule="iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sgp-Vf-Nlr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rck-Lj-r2x">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PyW-RR-fTA">
+                                <rect key="frame" x="178" y="324" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dw0-8O-g40"/>
+                    </view>
+                    <connections>
+                        <outlet property="indicatorView" destination="PyW-RR-fTA" id="W19-5x-BzQ"/>
+                        <outlet property="webView" destination="rck-Lj-r2x" id="rHS-6N-uhm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ll2-Xa-MbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3239.1999999999998" y="-243.32833583208398"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cbK-If-keH">
@@ -117,7 +212,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUb-lZ-XVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="56"/>
+            <point key="canvasLocation" x="-1375" y="27"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BGQ-77-bQY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xwx-Yw-Cam" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pMO-W6-HrO">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2cM-gM-BSp" kind="relationship" relationship="viewControllers" id="oHN-87-tlo"/>
+                        <segue destination="D1r-Q6-kVj" kind="relationship" relationship="viewControllers" id="Twq-eZ-iaq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4re-90-CXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317.5999999999999" y="-243.32833583208398"/>
         </scene>
     </scenes>
 </document>
