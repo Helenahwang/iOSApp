@@ -1,11 +1,3 @@
-//
-//  TheaterListController.swift
-//  iOSApp
-//
-//  Created by 502 on 2018. 11. 27..
-//  Copyright © 2018년 502. All rights reserved.
-//
-
 import UIKit
 
 class TheaterListController: UITableViewController {
@@ -87,5 +79,18 @@ class TheaterListController: UITableViewController {
         return 80
     }
  
+    //셀을 선택했을 때 호출되는 메소드
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //데이터 찾아오기
+        let theater = self.data[indexPath.row]
+        //하위 뷰 컨트롤러 객체 생성
+        let displayMapViewController = self.storyboard?.instantiateViewController(withIdentifier: "DisplayMapViewController") as! DisplayMapViewController
+        //데이터 넘겨주기
+        displayMapViewController.theater = theater
+        //비동기 적으로 푸시
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(displayMapViewController, animated: true)
+        }
+    }
 
 }

@@ -12,6 +12,13 @@
 		251EBBD321ACDCB60048CB93 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBD221ACDCB60048CB93 /* DetailViewController.swift */; };
 		251EBBD521ACF9B30048CB93 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBD421ACF9B30048CB93 /* TheaterListController.swift */; };
 		251EBBD721AD128B0048CB93 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBD621AD128B0048CB93 /* TheaterCell.swift */; };
+		251EBBDB21AE1E450048CB93 /* DisplayMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBDA21AE1E450048CB93 /* DisplayMapViewController.swift */; };
+		251EBBDF21AE30930048CB93 /* MemoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBDE21AE30930048CB93 /* MemoListVC.swift */; };
+		251EBBE121AE40D70048CB93 /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBE021AE40D70048CB93 /* MemoFormVC.swift */; };
+		251EBBE321AE60F80048CB93 /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBE221AE60F80048CB93 /* MemoReadVC.swift */; };
+		251EBBE521AE698B0048CB93 /* MemoVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBBE421AE698B0048CB93 /* MemoVO.swift */; };
+		2557B62121AF7453000B77D0 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557B62021AF7453000B77D0 /* MemoCell.swift */; };
+		2557B62421AF988D000B77D0 /* RedCoffeeCup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2557B62321AF988D000B77D0 /* RedCoffeeCup.png */; };
 		259640F221AB861500A47DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259640F121AB861500A47DBE /* AppDelegate.swift */; };
 		259640F421AB861500A47DBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259640F321AB861500A47DBE /* ViewController.swift */; };
 		259640F721AB861500A47DBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259640F521AB861500A47DBE /* Main.storyboard */; };
@@ -27,6 +34,13 @@
 		251EBBD221ACDCB60048CB93 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		251EBBD421ACF9B30048CB93 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
 		251EBBD621AD128B0048CB93 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
+		251EBBDA21AE1E450048CB93 /* DisplayMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMapViewController.swift; sourceTree = "<group>"; };
+		251EBBDE21AE30930048CB93 /* MemoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVC.swift; sourceTree = "<group>"; };
+		251EBBE021AE40D70048CB93 /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
+		251EBBE221AE60F80048CB93 /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
+		251EBBE421AE698B0048CB93 /* MemoVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVO.swift; sourceTree = "<group>"; };
+		2557B62021AF7453000B77D0 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		2557B62321AF988D000B77D0 /* RedCoffeeCup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCoffeeCup.png; sourceTree = "<group>"; };
 		259640EE21AB861500A47DBE /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259640F121AB861500A47DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259640F321AB861500A47DBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		251EBBD821AE1CE50048CB93 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				251EBBDA21AE1E450048CB93 /* DisplayMapViewController.swift */,
+				251EBBD421ACF9B30048CB93 /* TheaterListController.swift */,
+				251EBBD621AD128B0048CB93 /* TheaterCell.swift */,
+				251EBBD221ACDCB60048CB93 /* DetailViewController.swift */,
+				25A682E221AB8888008478DB /* MovieListController.swift */,
+				251EBBCC21AB9ABF0048CB93 /* MovieVO.swift */,
+				251EBBCE21ABA6840048CB93 /* MovieCell.swift */,
+			);
+			name = Movie;
+			path = "영화관";
+			sourceTree = "<group>";
+		};
+		251EBBDD21AE30600048CB93 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				251EBBDE21AE30930048CB93 /* MemoListVC.swift */,
+				251EBBE021AE40D70048CB93 /* MemoFormVC.swift */,
+				251EBBE221AE60F80048CB93 /* MemoReadVC.swift */,
+				251EBBE421AE698B0048CB93 /* MemoVO.swift */,
+				2557B62021AF7453000B77D0 /* MemoCell.swift */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		2557B62221AF982B000B77D0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2557B62321AF988D000B77D0 /* RedCoffeeCup.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		259640E521AB861500A47DBE = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +117,9 @@
 		259640F021AB861500A47DBE /* iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				2557B62221AF982B000B77D0 /* images */,
+				251EBBDD21AE30600048CB93 /* Memo */,
+				251EBBD821AE1CE50048CB93 /* Movie */,
 				259640F121AB861500A47DBE /* AppDelegate.swift */,
 				259640F321AB861500A47DBE /* ViewController.swift */,
 				259640F521AB861500A47DBE /* Main.storyboard */,
@@ -75,12 +127,6 @@
 				259640FD21AB861600A47DBE /* LaunchScreen.storyboard */,
 				2596410021AB861600A47DBE /* Info.plist */,
 				259640F821AB861500A47DBE /* iOSApp.xcdatamodeld */,
-				25A682E221AB8888008478DB /* MovieListController.swift */,
-				251EBBCC21AB9ABF0048CB93 /* MovieVO.swift */,
-				251EBBCE21ABA6840048CB93 /* MovieCell.swift */,
-				251EBBD221ACDCB60048CB93 /* DetailViewController.swift */,
-				251EBBD421ACF9B30048CB93 /* TheaterListController.swift */,
-				251EBBD621AD128B0048CB93 /* TheaterCell.swift */,
 			);
 			path = iOSApp;
 			sourceTree = "<group>";
@@ -145,6 +191,7 @@
 			files = (
 				259640FF21AB861600A47DBE /* LaunchScreen.storyboard in Resources */,
 				259640FC21AB861600A47DBE /* Assets.xcassets in Resources */,
+				2557B62421AF988D000B77D0 /* RedCoffeeCup.png in Resources */,
 				259640F721AB861500A47DBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,13 +205,19 @@
 			files = (
 				25A682E321AB8888008478DB /* MovieListController.swift in Sources */,
 				259640F421AB861500A47DBE /* ViewController.swift in Sources */,
+				251EBBE121AE40D70048CB93 /* MemoFormVC.swift in Sources */,
 				251EBBCF21ABA6840048CB93 /* MovieCell.swift in Sources */,
 				251EBBD521ACF9B30048CB93 /* TheaterListController.swift in Sources */,
 				251EBBD721AD128B0048CB93 /* TheaterCell.swift in Sources */,
 				259640F221AB861500A47DBE /* AppDelegate.swift in Sources */,
+				251EBBDB21AE1E450048CB93 /* DisplayMapViewController.swift in Sources */,
 				259640FA21AB861500A47DBE /* iOSApp.xcdatamodeld in Sources */,
 				251EBBCD21AB9ABF0048CB93 /* MovieVO.swift in Sources */,
+				251EBBE521AE698B0048CB93 /* MemoVO.swift in Sources */,
+				2557B62121AF7453000B77D0 /* MemoCell.swift in Sources */,
+				251EBBE321AE60F80048CB93 /* MemoReadVC.swift in Sources */,
 				251EBBD321ACDCB60048CB93 /* DetailViewController.swift in Sources */,
+				251EBBDF21AE30930048CB93 /* MemoListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

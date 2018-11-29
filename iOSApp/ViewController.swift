@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func moveMemo(_ sender: Any) {
+        let memoListVC =
+            self.storyboard?.instantiateViewController(withIdentifier: "MemoListVC") as? MemoListVC
+        memoListVC?.navigationItem.title = "메모 목록"
+        self.navigationController?.pushViewController(memoListVC!, animated: true)
+    }
     @IBAction func MoveMovie(_ sender: Any) {
         //하위 뷰 컨트롤러 객체 만들기
         let movieListController =
