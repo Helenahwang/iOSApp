@@ -41,6 +41,17 @@ self.navigationController?.pushViewController(
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "포트폴리오"
+        
+        if let revealVC = self.revealViewController(){
+            let btn = UIBarButtonItem()
+            btn.image = UIImage(named:"sidemenu.png")
+            btn.target = revealVC
+            btn.action = #selector(revealVC.revealToggle(_:))
+            self.navigationItem.leftBarButtonItem = btn
+            self.view.addGestureRecognizer(
+                revealVC.panGestureRecognizer())
+        }
+        
     }
 
 

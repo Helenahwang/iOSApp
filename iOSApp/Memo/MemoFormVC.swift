@@ -48,6 +48,13 @@ class MemoFormVC: UIViewController {
         
     }
     @IBAction func save(_ sender: Any) {
+        //대화상자 중간에 삽입할 ViewController를 생성
+        let contentVC = UIViewController()
+        let image = UIImage(named: "warning-icon-60")
+        contentVC.view = UIImageView(image: image)
+        //image.size가 nil 이라면 CGSize.Zero를 대입
+        contentVC.preferredContentSize = image?.size ?? CGSize.zero
+        
         //텍스트 뷰에 내용이 없으면 경고 창을 출력하고 종료
         //조건을 만족하지 않으면 종료 : guard
         //조건에 맞는 경우와 그렇지 않은 경우에 다른 처리 : if
@@ -61,6 +68,10 @@ class MemoFormVC: UIViewController {
             alert.addAction(
                 UIAlertAction(
                     title: "확인", style: .default))
+            
+            //ContentView를 설정
+            alert.setValue(contentVC, forKey: "contentViewController")
+            
             self.present(alert, animated: true)
             return
         }
@@ -89,6 +100,21 @@ class MemoFormVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.contents.delegate = self
+        
+        //현재 뷰의 배경을 설정
+        let bgImage = UIImage(named: "memo-background.png")
+        self.view.backgroundColor = UIColor(patternImage: bgImage!)
+        
+        //텍스트 뷰의 배경을 투명으로 변경
+        self.contents.layer.borderWidth = 0
+        self.contents.layer.borderColor = UIColor.clear.cgColor
+        self.contents.backgroundColor = UIColor.clear
+        
+        //텍스트 뷰의 줄 간격 조절
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 9
+        self.contents.attributedText = NSAttributedString(string: " ", attributes: [NSAttributedString.Key.paragraphStyle:style])
+        self.contents.text = ""
     }
 }
 //UITextViewDelegate
@@ -112,5 +138,14 @@ extension MemoFormVC: UIImagePickerControllerDelegate, UINavigationControllerDel
         self.preview.image =
             info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         picker.dismiss(animated:false)
+    }
+    
+    //터치를 하고 난 후 호출되는 메소드
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let bar = self.navigationController?.navigationBar
+        UIView.animate(withDuration: TimeInterval(0.5))
+        {
+            bar?.alpha = (bar?.alpha == 0 ? 1 : 0)
+        }
     }
 }
